@@ -35,14 +35,14 @@ header {
 header .header-wrap {
   flex-wrap: nowrap;
   margin: 0 auto;
-  width: 800px;
+  width: 960px;
 }
-header .header-wrap, header .e-tab {
+header .header-wrap, header .e-tab, header .e-tab .e-control {
   display: flex;
   justify-content: center;
 }
-header .e-tab .e-control {
-  max-width: 500px;
+header .e-tab {
+  max-width: 600px;
 }
 header .e-tab .e-tab-header .e-toolbar-item, header .e-tab .e-tab-header .e-toolbar-item .e-tab-wrap, header .e-tab .e-tab-header .e-toolbar-item .e-tab-wrap:hover {
   border: none !important;
@@ -151,7 +151,7 @@ header .nav-list {
   grid-gap: 1.3em;
   margin: 0 auto;
   padding-top: 1.5em;
-  max-width: 800px;
+  max-width: 960px;
 }
 header .nav-description, .nav-list {
   padding: 0.7em;
