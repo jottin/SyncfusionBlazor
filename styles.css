@@ -253,18 +253,27 @@ header .nav-list ul li a:hover {
 header .nav-list h4, header .nav-list ul {
   margin-left: 0.75em;
 }
-/* Topbar Scroll Animation */
+/* Header Scroll Animation */
 @supports (animation-timeline: view()) {
   @keyframes fade-out {
     from { opacity: 1; }
     to   { opacity: 0; }
   }
-  @keyframes slide-up {
+  @keyframes header-up {
     from { top: 0; }
     to   { top: -45px; }
   }
+  @keyframes tab-up {
+    from { top: 105px; }
+    to   { top: 60px; }    
+  }
   header:not(.mobile) {
-    animation: slide-up linear both;
+    animation: header-up linear both;
+    animation-timeline: scroll();
+    animation-range: 10% 100px;
+  }
+  header .e-tab .e-content {
+    animation: tab-up linear both;
     animation-timeline: scroll();
     animation-range: 10% 100px;
   }
