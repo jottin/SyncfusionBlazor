@@ -474,7 +474,7 @@ header.mobile .menubar .e-toolbar-items .e-text-wrap::before, header.mobile .men
 header.mobile .menubar .e-content {
   top: 80px !important;
   padding: 0 4em 0 5em;
-  height: 100%;
+  height: calc(100vh - 50%);
   width: 100%;
 }
 header.mobile .menubar .e-content .nav-list {
