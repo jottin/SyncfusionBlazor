@@ -7,8 +7,8 @@ body:has(header .e-toolbar-item.e-active:not(:nth-child(2))) {
   overflow-y: hidden; /* prevent double scrollbars on open tab */
 }
 @supports (not (-webkit-hyphens:none)) and (not (-moz-appearance:none)) { 
-  header:has(.e-toolbar-item.e-active:not(:nth-child(2))) {
-    padding-right: 1.075em; /* webkit browsers */
+  header:not(.mobile):has(.e-toolbar-item.e-active:not(:nth-child(2))) {
+    padding-right: 1.075em; /* prevent shift in webkit browsers */
   }
 }
 /* Default Theme Overrides */
@@ -390,24 +390,22 @@ header.mobile .menu-mobile {
   background-color: #069;
   box-shadow: 0 2px 3px rgb(0 102 153 / 30%);
   margin: 0 auto;
-  padding: 20px 50px 20px 70px;
+  padding: 20px 0 20px 0;
   opacity: 0;
-  transform: translate(-150%, 10px);
+  transform: translate(-150%, 5px);
   transition: all 0.2s ease;
+  width: 100%;
 }
 header.mobile input.menu-toggle:checked ~ .menu-mobile {
   opacity: 1;
-  transform: translate(0, 10px);
+  transform: translate(0, 5px);
   z-index: 0;
-}
-header.mobile .menu-mobile .e-tab {
-  max-width: 100%;
-  margin-left: -10px;
 }
 header.mobile .header-wrap {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
+  padding-top: 5px;
 }
 header.mobile .header-wrap a.flhc {
   margin-right: auto;
@@ -424,7 +422,9 @@ header.mobile .menubar .e-toolbar-items .e-toolbar-item {
   display: flex;
   position: initial !important;
   width: 100vw;
-  border-bottom: .15em solid rgba(0,0,0,.15) !important;
+}
+header.mobile .menubar .e-toolbar-items .e-toolbar-item:not(.e-active) {
+  border-top: .15em solid rgba(0,0,0,.15) !important;
 }
 header.mobile .menubar .e-toolbar-item:nth-child(2) {
   position: absolute !important;
@@ -472,13 +472,15 @@ header.mobile .menubar .e-toolbar-items .e-text-wrap::before, header.mobile .men
   margin-right: .5em;
 }
 header.mobile .menubar .e-content {
+  background-color: #005580 !important;
   top: 80px !important;
-  padding: 0 4em 0 5em;
   height: calc(100vh - 50%);
   width: 100%;
 }
 header.mobile .menubar .e-content .nav-list {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  font-size: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1em;
 }
 /* Breakpoints - Header */
 @media screen and (min-width: 630.5px) and (max-width: 730px) {
