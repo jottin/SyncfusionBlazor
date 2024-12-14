@@ -25,7 +25,7 @@ body:has(header .e-toolbar-item.e-active:not(:nth-child(2))) {
   display: none !important;
 }
 /* Header Desktop */
-header, header .topbar, header .header-wrap, header .e-tab, header .e-tab .e-control {
+header, header .topbar, header .header-wrap, header .e-tab, header .e-tab .e-tab-header {
   display: flex;
   justify-content: center;
 }
@@ -301,7 +301,7 @@ header .e-toolbar-item:nth-child(2) {
   left: 0;
   z-index: 100;
 }
-header .e-toolbar-item.e-active:nth-child(2), header .e-control:has(.e-toolbar-item.e-active:nth-child(2)) ~ .e-content {
+header .e-toolbar-item.e-active:nth-child(2), header .e-tab-header:has(.e-toolbar-item.e-active:nth-child(2)) ~ .e-content {
   display: none;
 }
 header .e-toolbar-item:nth-child(3), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(3)) .e-toolbar-item:nth-child(2) {
@@ -390,7 +390,7 @@ header.mobile .menu-mobile {
   background-color: #069;
   box-shadow: 0 2px 3px rgb(0 102 153 / 30%);
   margin: 0 auto;
-  padding: 20px 0 20px 0;
+  padding: 20px 0;
   opacity: 0;
   transform: translate(-150%, 5px);
   transition: all 0.2s ease;
@@ -494,7 +494,7 @@ header.mobile .menubar .e-content .nav-list {
     margin: 0;
     width: 100%;
   }
-  header .e-tab .e-control {
+  header .e-tab .e-tab-header {
     justify-content: start;
   }
 }
