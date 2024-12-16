@@ -190,6 +190,15 @@ header .e-tab .e-content {
   height: calc(90% - 60px);
   width: 100%;
 }
+header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(6)) ~ .e-content {
+  max-height: 275px;
+}
+header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(5)) ~ .e-content, header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(4)) ~ .e-content {
+  max-height: 425px;
+}
+header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(3)) ~ .e-content {
+  max-height: 575px;
+}
 header .e-tab .e-content::after {
   content: "";
   display: flex;
