@@ -3,12 +3,23 @@ Custom Blazor Styles for CHARTS
 FLHealthCHARTS.gov
 */
 /* Scrollbar Fixes */
-body:has(header .e-toolbar-item.e-active:not(:nth-child(2))) {
-  overflow-y: hidden; /* prevent double scrollbars on open tab */
+body:has(header:not(.mobile) .e-toolbar-item.e-active:not(:nth-child(2))) {
+  overflow-y: hidden; /* prevent double scrollbars on open tab - desktop */
 }
-@supports (not (-webkit-hyphens:none)) and (not (-moz-appearance:none)) { 
+body:has(header:not(.mobile) .e-toolbar-item.e-active:nth-child(7)) {
+  overflow-y: auto; /* prevent double scrollbars on closed tab - desktop */
+}
+body:has(header.mobile input.menu-toggle:checked) {
+  overflow-y: hidden; /* prevent double scrollbars on open tab - mobile */
+}
+@supports (not (-webkit-hyphens:none)) and (not (-moz-appearance:none)) {
   header:not(.mobile):has(.e-toolbar-item.e-active:not(:nth-child(2))) {
     padding-right: 1.075em; /* prevent shift in webkit browsers */
+  }
+}
+@supports (not (-webkit-hyphens:none)) and (not (-moz-appearance:none)) {
+header:not(.mobile):has(.e-toolbar-item.e-active:nth-child(7)) {
+    padding-right: 0; /* prevent shift in webkit browsers */
   }
 }
 /* Default Theme Overrides */
@@ -97,7 +108,7 @@ header .topbar, header .header-wrap {
   max-width: 960px;
   width: 100%;
 }
-header .e-tab {
+header:not(.mobile) .e-tab {
   max-width: 600px;
 }
 header .e-tab .e-tab-header .e-toolbar-item, header .e-tab .e-tab-header .e-toolbar-item .e-tab-wrap, header .e-tab .e-tab-header .e-toolbar-item .e-tab-wrap:hover {
@@ -115,9 +126,12 @@ header .e-toolbar-item .e-tab-wrap {
   justify-content: center;
   margin: 0 auto;
 }
-header .e-toolbar-item .e-tab-wrap:hover {
-  background-color: rgba(200,200,200,.1) !important;
+header .e-toolbar-item .e-tab-wrap:hover, header:not(.mobile) .e-toolbar-item .e-tab-wrap:focus {
+  background-color: rgb(236 241 247 / 60%) !important;
   border-radius: 0 !important;
+}
+header .e-toolbar-item:nth-child(2) .e-tab-wrap:hover {
+  background-color: transparent !important;
 }
 header .e-tab .e-tab-header .e-toolbar-item .e-tab-wrap:hover .e-tab-text, header .e-tab .e-tab-header .e-toolbar-item.e-active .e-tab-wrap .e-tab-text {
   color: #005580;
@@ -283,6 +297,11 @@ header .nav-list h4, header .nav-list ul {
     animation-timeline: scroll();
     animation-range: 10% 100px;
   }
+  header .e-toolbar-item:nth-child(7) {
+    animation: tab-up linear both;
+    animation-timeline: scroll();
+    animation-range: 10% 100px;
+  }
   header::after, header .topbar {
     animation: fade-out linear both;
     animation-timeline: scroll();
@@ -327,6 +346,33 @@ header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(5)) .e-toolbar-it
 }
 header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(6)) .e-toolbar-item:nth-child(2) {
   left: 386px;
+}
+/* Close Tab - Button */
+header .e-toolbar-item:nth-child(7), header .e-tab-header:has(.e-toolbar-item.e-active:nth-child(7)) ~ .e-content {
+  display: none;
+}
+header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(3)) .e-toolbar-item:nth-child(7), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(4)) .e-toolbar-item:nth-child(7), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(5)) .e-toolbar-item:nth-child(7), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(6)) .e-toolbar-item:nth-child(7) {
+  display: flex;
+}
+header .e-toolbar-item:nth-child(7) {
+  background-color: transparent !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-x-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z'/%3E%3C/svg%3E") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px !important;
+  height: 30px !important;
+  width: 30px !important;
+  position: fixed !important;
+  margin-top: 5px !important;
+  right: 25px;
+  z-index: 100;
+  transition: all .15s ease;
+}
+header .e-toolbar-item:nth-child(7):hover {
+  scale: 1.2;
+}
+header .e-toolbar-item:nth-child(7) .e-tab-wrap, header .e-toolbar-item:nth-child(7) .e-tab-wrap:focus {
+  background-color: transparent !important;
 }
 /* Header Mobile */
 header.mobile input.menu-toggle, header.mobile label.menu-toggle {
