@@ -1,6 +1,6 @@
 /*
-Custom Blazor Styles for CHARTS
-FLHealthCHARTS.gov
+Custom Styles for CHARTS Blazor Project
+https://blazorplayground.syncfusion.com/LjVTMBixHhSMyoIW
 */
 /* Scrollbar Fixes */
 body:has(header:not(.mobile) .e-toolbar-item.e-active:not(:nth-child(2))) {
@@ -36,7 +36,7 @@ header:not(.mobile):has(.e-toolbar-item.e-active:nth-child(7)) {
   display: none !important;
 }
 *:focus-visible {
-  box-shadow: 0 0 0 2px inset #006699 !important;
+  box-shadow: 0 0 0 2px inset #000000 !important;
   outline: none !important;
 }
 /* Header Desktop */
@@ -121,7 +121,7 @@ header .e-tab .e-tab-header .e-toolbar-item, header .e-tab .e-tab-header .e-tool
 header .e-toolbar-item {
   position: relative !important;
 }
-header .e-toolbar-item, header .e-toolbar-item .e-tab-wrap {
+header .e-toolbar-item, header .e-toolbar-item:not(:nth-child(7)) .e-tab-wrap {
   height: 60px !important;
 }
 header .e-toolbar-item .e-tab-wrap {
@@ -191,17 +191,17 @@ header .e-tab .e-content {
   bottom: 0;
   left: 0;
   margin-bottom: 3em;
-  height: calc(90% - 60px);
+  height: calc(90% - 60px); /* for all tabs unless overridden below */
   width: 100%;
 }
-header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(6)) ~ .e-content {
-  max-height: 275px;
-}
-header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(5)) ~ .e-content, header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(4)) ~ .e-content {
-  max-height: 425px;
-}
 header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(3)) ~ .e-content {
-  max-height: 575px;
+  max-height: 575px; /* for Reports */
+}
+header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(4)) ~ .e-content, header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(5)) ~ .e-content {
+  max-height: 425px; /* for Indicators and Queries */
+}
+header:not(.mobile) .e-tab-header:has(.e-toolbar-item.e-active:nth-child(6)) ~ .e-content {
+  max-height: 275px; /* for Resources */
 }
 header .e-tab .e-content::after {
   content: "";
@@ -337,11 +337,12 @@ header .e-toolbar-item.e-active:nth-child(2), header .e-toolbar-item.e-active:nt
   background-color: transparent !important;
   padding: 0 !important;
 }
-header .e-toolbar-item.e-active:nth-child(2), header .e-toolbar-item:nth-child(7) {
+header .e-toolbar-item.e-active:nth-child(2), header .e-toolbar-item:nth-child(7), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(7)) .e-toolbar-item:nth-child(2) {
   opacity: 0;
+  left: -100% !important; /* hide first and last empty tab but retain keyboard access */
 }
 header .e-tab-header:has(.e-toolbar-item.e-active:nth-child(2)) ~ .e-content {
-  display: none;
+  display: none; /* hide tab menu by default when first empty tab is active */
 }
 header .e-toolbar-item:nth-child(3), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(3)) .e-toolbar-item:nth-child(2) {
   width: 90px;
@@ -369,11 +370,12 @@ header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(6)) .e-toolbar-it
 }
 /* Close Tab - Button */
 header .e-tab-header:has(.e-toolbar-item.e-active:nth-child(7)) ~ .e-content {
-  display: none;
+  display: none; /* hide tab menu when last empty tab is active */
 }
 header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(3)) .e-toolbar-item:nth-child(7), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(4)) .e-toolbar-item:nth-child(7), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(5)) .e-toolbar-item:nth-child(7), header .e-toolbar-items:has(.e-toolbar-item.e-active:nth-child(6)) .e-toolbar-item:nth-child(7) {
   display: flex;
   opacity: 1;
+  left: initial !important; /* show close button on tab active state */
 }
 header .e-toolbar-item:nth-child(7) {
   background-color: transparent !important;
