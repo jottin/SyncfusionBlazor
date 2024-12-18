@@ -36,7 +36,7 @@ header:not(.mobile):has(.e-toolbar-item.e-active:nth-child(7)) {
   display: none !important;
 }
 *:focus-visible {
-  box-shadow: 0 0 0 2px inset #000000 !important;
+  box-shadow: 0 0 0 2px inset #000000;
   outline: none !important;
 }
 /* Header Desktop */
