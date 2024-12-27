@@ -1,6 +1,6 @@
 /*
 Custom Styles for CHARTS Blazor Project
-https://blazorplayground.syncfusion.com/VXLzWrrmnsEOmFtw
+https://blazorplayground.syncfusion.com/LXhzWVhmmUvYtSac
 */
 /* Scrollbar Fixes */
 body:has(header:not(.mobile) .e-toolbar-item.e-active:not(:nth-child(2))) {
@@ -891,15 +891,33 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
 /* Logo Slider */
 #logo-slider {
   margin: 0 auto;
-  max-width: 1800px;
+  max-width: 1160px;
   padding-bottom: 1em;
+  position: relative;
+}
+#logo-slider::before, #logo-slider::after {
+  content: "";
+  display: block;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+#logo-slider::before {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  left: 0;
+}
+#logo-slider::after {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+  right: 0;
 }
 #logo-slider .slider-container {
   height: 200px;
   width: 100%;
 }
 .e-carousel.e-partial .e-carousel-slide-container {
-  padding: 0 33%;
+  padding: 0 36%;
 }
 .e-carousel .slide-content {
   align-items: center;
@@ -915,8 +933,31 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   align-items: center;
   justify-content: center;
   margin-top: -2em;
+}
+/* flship */
+.e-carousel .e-carousel-item:last-child .slide-content a, .e-carousel .e-carousel-item:nth-child(2) .slide-content a {
   height: 120px;
   width: 120px;
+}
+/* phab */
+.e-carousel .e-carousel-item:nth-child(3) .slide-content a {
+  height: 48px;
+  width: 167px;
+}
+/* tobfreefl */
+.e-carousel .e-carousel-item:nth-child(4) .slide-content a {
+  height: 48px;
+  width: 167px;
+}
+/* myfl */
+.e-carousel .e-carousel-item:nth-child(5) .slide-content a {
+  height: 99px;
+  width: 130px;
+}
+/* flhealth */
+.e-carousel .e-carousel-item:first-child .slide-content a, .e-carousel .e-carousel-item:nth-child(6) .slide-content a {
+  height: 72px;
+  width: 130px;
 }
 .e-carousel .e-carousel-indicators.e-default .e-indicator-bar .e-indicator {
   width: 12px;
@@ -945,6 +986,15 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
 }
 .e-carousel .e-carousel-indicators.e-default .e-indicator-bar .e-indicator:hover {
   border: 1px solid #00b4cc !important;
+}
+/* Breakpoints - Logo Slider */
+@media (max-width: 700px) {
+  .e-carousel .slide-content a {
+    scale: .9;
+  }
+  .e-carousel.e-partial .e-carousel-slide-container {
+    padding: 0 26%;
+  }
 }
 /* Footer */
 footer {
