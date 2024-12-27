@@ -1,6 +1,6 @@
 /*
 Custom Styles for CHARTS Blazor Project
-https://blazorplayground.syncfusion.com/hNhJMVVxdluPuzNd
+https://blazorplayground.syncfusion.com/VXLzWrrmnsEOmFtw
 */
 /* Scrollbar Fixes */
 body:has(header:not(.mobile) .e-toolbar-item.e-active:not(:nth-child(2))) {
@@ -339,22 +339,22 @@ header .nav-list h4, header .nav-list ul {
   header:not(.mobile) {
     animation: header-up linear both;
     animation-timeline: scroll();
-    animation-range: 10% 100px;
+    animation-range: 5% 100px;
   }
   header .e-tab .e-content {
     animation: tab-up linear both;
     animation-timeline: scroll();
-    animation-range: 10% 100px;
+    animation-range: 5% 100px;
   }
   header .e-toolbar-item:nth-child(7) {
     animation: tab-up linear both;
     animation-timeline: scroll();
-    animation-range: 10% 100px;
+    animation-range: 5% 100px;
   }
   header::after, header .topbar {
     animation: fade-out linear both;
     animation-timeline: scroll();
-    animation-range: 10% 100px;
+    animation-range: 5% 100px;
   } 
 }
 /* Close Tab - Empty Tab Over Active Tab */
@@ -821,7 +821,6 @@ form.roundsearchbar:has(input.form-control:focus) {
   outline: 5px solid #fff4 !important;
   transition: all 0.1s ease;
 }
-/* Add some breathing room to mobile search bar */
 form.form-inline.roundsearchbar {
   width: 85% !important;
 }
@@ -888,6 +887,64 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
     opacity: 0;
     transform: translateY(0);
   }
+}
+/* Logo Slider */
+#logo-slider {
+  margin: 0 auto;
+  max-width: 1800px;
+  padding-bottom: 1em;
+}
+#logo-slider .slider-container {
+  height: 200px;
+  width: 100%;
+}
+.e-carousel.e-partial .e-carousel-slide-container {
+  padding: 0 33%;
+}
+.e-carousel .slide-content {
+  align-items: center;
+  display: flex;
+  font-size: 1.5em;
+  height: 100%;
+  justify-content: center;
+  border: 1px solid red;
+}
+.e-carousel .slide-content a {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2em;
+  height: 120px;
+  width: 120px;
+}
+.e-carousel .e-carousel-indicators.e-default .e-indicator-bar .e-indicator {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 0;
+  border: 1px solid #91a3ba !important;
+  border-radius: 50px;
+  background: rgb(236,241,247);
+  background: -moz-linear-gradient(0deg, rgba(236,241,247,1) 0%, rgba(255,255,255,1) 70%);
+  background: -webkit-linear-gradient(0deg, rgba(236,241,247,1) 0%, rgba(255,255,255,1) 70%);
+  background: linear-gradient(0deg, rgba(236,241,247,1) 0%, rgba(255,255,255,1) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ecf1f7",endColorstr="#ffffff",GradientType=1);
+  opacity: 1;
+  outline: none;
+}
+.e-carousel .e-carousel-indicators.e-default .e-indicator-bar.e-active .e-indicator {
+  background: #00b4cc;
+  border: 1px solid #00b4cc !important;
+  transform: scale(1.15);
+  transition: transform 0.2s ease-in-out;
+}
+.e-carousel .e-carousel-indicators.e-default .e-indicator-bar .e-indicator div, .e-carousel .e-carousel-indicators.e-default .e-indicator-bar.e-active .e-indicator div {
+  display: none;
+}
+.e-carousel .e-carousel-indicators.e-default .e-indicator-bar .e-indicator:hover {
+  border: 1px solid #00b4cc !important;
 }
 /* Footer */
 footer {
@@ -1085,7 +1142,7 @@ footer .copyright span.flhealthblu {
   height: 40px;
   width: 70px;
 }
-/* breakpoint and down - footer styles */
+/* Breakpoints - Footer */
 @media screen and (max-width: 991.5px) {
   footer .footer-signin h4, footer .footer-signin p {
     text-align: center;
