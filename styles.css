@@ -1,6 +1,6 @@
 /*
 Custom Styles for CHARTS Blazor Project
-https://blazorplayground.syncfusion.com/LXhzWVhmmUvYtSac
+https://blazorplayground.syncfusion.com/LNVoDMZhxghZnATs
 */
 /* Scrollbar Fixes */
 body:has(header:not(.mobile) .e-toolbar-item.e-active:not(:nth-child(2))) {
@@ -343,22 +343,22 @@ header .nav-list h4, header .nav-list ul {
   header:not(.mobile) {
     animation: header-up linear both;
     animation-timeline: scroll();
-    animation-range: 5% 100px;
+    animation-range: 2% 200px;
   }
   header .e-tab .e-content {
     animation: tab-up linear both;
     animation-timeline: scroll();
-    animation-range: 5% 100px;
+    animation-range: 2% 200px;
   }
   header .e-toolbar-item:nth-child(7) {
     animation: tab-up linear both;
     animation-timeline: scroll();
-    animation-range: 5% 100px;
+    animation-range: 2% 200px;
   }
   header::after, header .topbar {
     animation: fade-out linear both;
     animation-timeline: scroll();
-    animation-range: 5% 100px;
+    animation-range: 2% 200px;
   } 
 }
 /* Close Tab - Empty Tab Over Active Tab */
@@ -890,6 +890,46 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
     opacity: 0;
     transform: translateY(0);
   }
+}
+/* Service Cards */
+#service-cards {
+  background: #ecf1f7;
+  border-top: 1px solid #d9dee5;
+  border-bottom: 1px solid #d9dee5;
+}
+.cards-container {
+  border: 1px solid red;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 50px;
+}
+.section-title {
+  border: 1px solid red;
+}
+.section-cards .e-card {
+  border: 1px solid red;
+  flex-direction: row;
+}
+.section-cards .e-card, .e-card > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.e-card .icon-releases, .e-card .icon-know, .e-card .icon-facts, .e-card .icon-connect {
+  border: 1px solid black;
+  min-height: 100px;
+  width: 100px;
+}
+.e-card .e-card-header {
+  width: calc(100% - 100px);
+}
+.e-card .e-card-content {
+  margin: 0;
+  padding-left: 116px;
+  width: calc(100% + 100px);
+}
+.e-card .btn-primary2 {
+  margin: 0 0 0 116px;
 }
 /* Logo Slider */
 #logo-slider {
