@@ -1065,11 +1065,21 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   }
 }
 /* Features */
+.features-container .section-title {
+  border-top: 1px solid #d9dee5;
+  border-right: 1px solid #d9dee5;
+  border-bottom: none;
+  border-left: 1px solid #d9dee5;
+  border-radius: 20px 20px  0 0;
+  max-width: 100%;
+  padding-bottom: 0.4em !important;
+}
 .features-container .section-title h2 {
   background-color: #fff;
 }
 .features-container .e-accordion {
   border: 1px solid #d9dee5;
+  margin-top: -5px;
 }
 .features-container .e-accordion .e-acrdn-item:nth-child(even), .features-container .e-accordion .e-acrdn-item:nth-child(even).e-select.e-expand-state > .e-acrdn-header {
   background-color: #fff;
@@ -1102,9 +1112,14 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   color: #444 !important;
   text-decoration: none;
 }
+.features-container .e-accordion .e-acrdn-item > .e-acrdn-header {
+  white-space: initial;
+}
 .features-container .e-accordion .e-acrdn-item > .e-acrdn-header .e-acrdn-header-content {
   font-size: 1.23em;
   font-weight: 600;
+  line-height: 1.1em;
+  padding: 1em 1em 1em 0;
 }
 .features-container .e-accordion .e-acrdn-item.e-selected > .e-acrdn-header .e-tgl-collapse-icon::before {
   color: #444 !important;
@@ -1119,6 +1134,12 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   justify-content: space-between;
   min-height: 4em;
 }
+/* Breakpoints - Features */
+@media (max-width: 530px) {
+  .features-container .section-title {
+    border: none;
+  }
+}
 /* Service Cards */
 #service-cards {
   background: #ecf1f7;
@@ -1131,7 +1152,7 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   padding: 60px 50px 50px;
 }
 .section-title {
-  border-top: 3px solid #d9dee5;
+  border-top: 1px solid #c5cfdd;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1144,7 +1165,7 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   display: inline-block;
   padding: 0 10px;
   position: relative;
-  top: -18px;
+  top: -15px;
   text-align: center;
   text-transform: uppercase;
 }
