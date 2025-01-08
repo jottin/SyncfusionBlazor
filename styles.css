@@ -1,6 +1,6 @@
 /*
 Custom Styles for CHARTS Blazor Project
-https://blazorplayground.syncfusion.com/rXLItiZQyACDaJup
+https://blazorplayground.syncfusion.com/LXhIDsZblBjSQWoo
 */
 /* Typography */
 body {
@@ -803,8 +803,8 @@ header.mobile .menubar .e-content .nav-list {
   background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
-  padding: 1em 0;
-  margin: 65px 0 100px 0;
+  padding: 1em 0 2em 0;
+  margin: 65px 0 0 0;
   z-index: 99;
   transition: 0.3s;
 }
@@ -1064,6 +1064,42 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
     opacity: 0;
     transform: translateY(0);
   }
+}
+/* Data Spotlight */
+.spotlight-container {
+  background-color: #fff;
+  border: 1px solid;
+  margin: -20px auto 0 auto;
+  max-width: 960px;
+  padding: 1em;
+  position: relative;
+  z-index: 100;
+}
+.spotlight-container .row > .col-md-6 {
+  border: 1px solid red;
+  width: 50%;
+}
+.spotlight-container .row > .col-md-6:nth-child(2) {
+  
+}
+.spotlight-container .row > .col-md-6 > .row {
+  margin: 0 0 auto;
+}
+.spotlight-container .row > .col-md-6 > .row button, .spotlight-container .row > .col-md-6 > .row a {
+  align-self: center;
+  width: max-content;
+}
+.spotlight-container .e-carousel .e-carousel-items .e-carousel-item:not(.e-active) {
+  height: 0;
+  opacity: 0;
+}
+.spotlight-container .e-carousel .e-carousel-items .e-carousel-item.e-active {
+  background-color: gray;
+  height: 100%;
+  opacity: 1;
+}
+.spotlight-container .e-carousel-indicators.e-default {
+  border: 1px solid red;
 }
 /* Features */
 .features-container .section-title {
