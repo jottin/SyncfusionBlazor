@@ -1,6 +1,6 @@
 /*
 Custom Styles for CHARTS Blazor Project
-https://blazorplayground.syncfusion.com/LXhIDsZblBjSQWoo
+https://blazorplayground.syncfusion.com/hjLeDMstoJajTVsa
 */
 /* Typography */
 body {
@@ -1090,26 +1090,45 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
     transform: translateY(0);
   }
 }
-/* Data Spotlight */
+/* Spotlight */
 .spotlight-container {
   background-color: #fff;
-  border-radius: 15px 15px 0 0;
+  border: 1px solid #d9dee5;
+  border-radius: 15px 15px 4px 4px;
   margin: -20px auto 0 auto;
   max-width: 960px;
-  padding: 1em;
+  padding: 1.5em 1.5em 0 1.5em;
   position: relative;
   z-index: 100;
 }
 .spotlight-container .row > .col-md-6 {
   width: 50%;
 }
-.spotlight-container .row > .col-md-6:nth-child(2) {
-  
-}
 .spotlight-container .row > .col-md-6 .data-spot-1 {
   border: 1px solid;
-  height: 100%;
+  padding: 0 2em;
+  min-height: 360px;
   width: 100%;
+  background-color: #eee;
+}
+.spotlight-container .row > .col-md-6:nth-child(2) h4 {
+  font-size: 1.85em;
+  font-weight: normal;
+  margin-bottom: 0;
+  padding-top: 0.85em;
+  padding-right: 0.5em;
+}
+.spotlight-container .row > .col-md-6:nth-child(2) h6:nth-of-type(1) {
+  font-size: 3em;
+  margin-bottom: 0.15em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+}
+.spotlight-container .row > .col-md-6:nth-child(2) h6:nth-of-type(2) {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  padding-right: 0.5em;
 }
 .spotlight-container .row > .col-md-6 > .row {
   flex-direction: column;
@@ -1124,6 +1143,7 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   font-size: 14px;
   line-height: 1.5em;
   margin-bottom: 0.5em;
+  padding-right: 0.85em;
   padding-left: 0;
   opacity: 0;
   transform: translateY(-15px);
@@ -1150,20 +1170,31 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   opacity: 1;
 }
 .spotlight-container .e-carousel-indicators.e-default {
-  border: 1px solid red;
+  border-top: 1px solid #d9dee5;
+  margin-top: 2em;
   position: initial;
 }
 .spotlight-container .e-carousel .e-carousel-navigators .e-next {
-  margin-right: -2em;
+  margin-right: -3.2em;
+  position: absolute;
+  top: 130px;
+  right: 0;
 }
 .spotlight-container .e-carousel .e-carousel-navigators .e-previous {
-  margin-left: -2em;
+  margin-left: -3.2em;
+  position: absolute;
+  top: 130px;
+  left: 0;
 }
 .spotlight-container .e-carousel .e-carousel-navigators .e-btn {
-  background-color: #fff;
-  border: 1px solid #bad4dc;
+  background-color: #ffffff99 !important;
+  border: 1px solid #bad4dc99;
   height: 40px;
   width: 40px;
+}
+.spotlight-container .e-carousel .e-carousel-navigators .e-btn:hover {
+  background-color: #ffffff !important;
+  border: 1px solid #bad4dc;
 }
 .spotlight-container .e-carousel .e-carousel-navigators .e-next .e-btn .e-next-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23006699'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
@@ -1181,7 +1212,7 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
 .spotlight-container .e-carousel .e-carousel-navigators .e-btn .e-icons::before {
   display: none;
 }
-/* Breakpoints - Data Spotlight */
+/* Breakpoints - Spotlight */
 @media (max-width: 1030px) {
   .spotlight-container {
     margin-right: 2em;
@@ -1192,6 +1223,9 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   .spotlight-container {
     margin-right: 1em;
     margin-left: 1em;
+  }
+  .spotlight-container .row > .col-md-6 {
+    width: 100%;
   }
 }
 /* Features */
@@ -1265,6 +1299,12 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   min-height: 4em;
 }
 /* Breakpoints - Features */
+@media (max-width: 630px) {
+  .features-container {
+    padding-right: 1em !important;
+    padding-left: 1em !important;
+  }
+}
 @media (max-width: 530px) {
   .features-container .section-title {
     border: none;
