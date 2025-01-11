@@ -1,6 +1,6 @@
 /*
 Custom Styles for CHARTS Blazor Project
-https://blazorplayground.syncfusion.com/hjLeDMstoJajTVsa
+https://blazorplayground.syncfusion.com/hZLotsMNlnLWLWSS
 */
 /* Typography */
 body {
@@ -1105,11 +1105,15 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   width: 50%;
 }
 .spotlight-container .row > .col-md-6 .data-spot-1 {
-  border: 1px solid;
-  padding: 0 2em;
-  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  background-color: #eee;
+}
+.spotlight-container .row > .col-md-6 .data-spot-1 h6 {
+  font-size: 1em;
+  margin: 0 auto;
+  order: 1;
 }
 .spotlight-container .row > .col-md-6:nth-child(2) h4 {
   font-size: 1.85em;
