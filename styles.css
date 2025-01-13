@@ -738,6 +738,9 @@ header.mobile .menubar .e-toolbar-items .e-toolbar-item {
 header.mobile .menubar .e-toolbar-items .e-toolbar-item:not(.e-active) {
   border-top: .15em solid rgba(0,0,0,.15) !important;
 }
+header.mobile .menubar .e-toolbar-items .e-toolbar-item:not(.e-active):last-child {
+  border-bottom: .15em solid rgba(0,0,0,.15) !important;
+}
 header.mobile .menubar .e-toolbar-item:nth-child(2) {
   position: absolute !important;
   top: 0 !important;
