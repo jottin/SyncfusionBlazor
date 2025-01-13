@@ -1391,11 +1391,11 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
 }
 .section-cards .e-card::before {
   content: "";
-  background: rgb(255 251 232);
-  background: -moz-radial-gradient(circle, rgb(255 251 232) 15%, rgba(236,241,247,0.6) 60%);
-  background: -webkit-radial-gradient(circle, rgb(255 251 232) 15%, rgba(236,241,247,0.6) 60%);
-  background: radial-gradient(circle, rgb(255 251 232) 15%, rgba(236,241,247,0.6) 60%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fffbe8",endColorstr="#ecf1f7",GradientType=1);
+  background: rgb(255 244 222);
+  background: -moz-radial-gradient(circle, rgb(255 244 222) 15%, rgba(236,241,247,0.6) 60%);
+  background: -webkit-radial-gradient(circle, rgb(255 244 222) 15%, rgba(236,241,247,0.6) 60%);
+  background: radial-gradient(circle, rgb(255 244 222) 15%, rgba(236,241,247,0.6) 60%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff4de",endColorstr="#ecf1f7",GradientType=1);
   background-position: 0 -50px;
   border-right: 1px solid #d9dee5b0;
   display: block;
