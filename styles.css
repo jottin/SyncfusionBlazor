@@ -1508,10 +1508,9 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   font-size: 1.5em;
   height: 100%;
   justify-content: center;
-  border: 1px solid red;
 }
 .e-carousel .slide-content a {
-  border: 1px solid red;
+  background-color: #d9dee599;
   display: flex;
   align-items: center;
   justify-content: center;
