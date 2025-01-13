@@ -39,6 +39,10 @@ p {
   font-size: 14px;
   line-height: 1.5em;
 }
+svg text {
+  font-family: "Open Sans", arial, helvetica, sans-serif;
+  font-size: 0.95em;
+}
 /* Buttons */
 button, .btn-primary1, .btn-primary2, .btn-primary3, .btn-secondary1, .btn-secondary2 {
   font-family: "Open Sans", arial, helvetica, sans-serif !important;
@@ -1108,12 +1112,22 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 0 0 20px;
+  position: relative;
+  height: 330px;
   width: 100%;
 }
 .spotlight-container .row > .col-md-6 .data-spot-1 h6 {
+  display: flex;
+  justify-content: center;
   font-size: 1em;
   margin: 0 auto;
-  order: 1;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 125px;
+  left: -110px;
+  width: 250px;
+  z-index: 1;
 }
 .spotlight-container .row > .col-md-6:nth-child(2) h4 {
   font-size: 1.85em;
@@ -1230,6 +1244,12 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   }
   .spotlight-container .row > .col-md-6 {
     width: 100%;
+  }
+  .spotlight-container .row > .col-md-6:nth-child(2) h4 {
+    padding-top: 0;
+  }
+  .spotlight-container .row > .col-md-6 .data-spot-1 {
+    padding-right: 30px;
   }
 }
 /* Features */
