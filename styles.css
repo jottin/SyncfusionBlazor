@@ -1192,7 +1192,7 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
 }
 .spotlight-container .e-carousel-indicators.e-default {
   border-top: 1px solid #d9dee5;
-  margin-top: 2em;
+  margin-top: 1em;
   position: initial;
 }
 .spotlight-container .e-carousel .e-carousel-navigators .e-next {
@@ -1248,11 +1248,16 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   .spotlight-container .row > .col-md-6 {
     width: 100%;
   }
-  .spotlight-container .row > .col-md-6:nth-child(2) h4 {
+  .spotlight-container .row > .col-md-6:nth-child(2) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .spotlight-container .row > .col-md-6:nth-child(2) h4, .spotlight-container .row > .col-md-6 > .row p {
     padding-top: 0;
+    padding-right: 0;
   }
   .spotlight-container .row > .col-md-6 .data-spot-1 {
-    padding-right: 30px;
+    padding-right: 2%;
   }
 }
 /* Features */
