@@ -294,9 +294,9 @@ header .topbar .toplinks a  {
   font-size: 1.05em;
   font-weight: normal;
   margin: 0 5px;
-  transition: 0.3s;
   text-align: center;
   text-decoration-color: transparent;
+  transition: 0.2s all ease;
 }
 header .topbar .toplinks a:hover {
   text-decoration-color: #006699;
@@ -1311,6 +1311,12 @@ form.roundsearchbar input[type=search]:focus + .switch-text {
   font-weight: 600;
   line-height: 1.1em;
   padding: 1em 1em 1em 0;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.2s all ease;
+}
+.features-container .e-accordion .e-acrdn-item > .e-acrdn-header .e-acrdn-header-content:hover {
+  text-decoration-color: #069;
 }
 .features-container .e-accordion .e-acrdn-item.e-selected > .e-acrdn-header .e-tgl-collapse-icon::before {
   color: #444 !important;
@@ -1679,7 +1685,7 @@ footer .footer-top .social-links a {
   text-align: center;
   width: 36px;
   height: 36px;
-  transition: 0.3s;
+  transition: 0.2s all ease;
 }
 footer .footer-top .social-links a:hover {
   color: #fff;
@@ -1725,7 +1731,7 @@ footer .footer-top .footer-links ul li a {
   line-height: 1;
   text-decoration: underline;
   text-decoration-color: transparent;
-  transition: all .2s ease;
+  transition: 0.2s all ease;
 }
 footer .footer-top .footer-links ul li a:hover {
   text-decoration-color: #fff;
