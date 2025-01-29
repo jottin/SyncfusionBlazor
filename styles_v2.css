@@ -400,7 +400,7 @@ header a.flhc {
   padding: 0 1em;
   font-family: "Open Sans", arial, helvetica, sans-serif !important;
   font-size: 0.95em;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
   text-transform: capitalize;
   white-space: nowrap;
@@ -661,7 +661,7 @@ header.mobile .form-menu-label, header.mobile .form-menu-btn {
   background-color: #069;
   color: #fff;
   font-size: 1.05em;
-  font-weight: 500;
+  font-weight: 600;
 }
 header.mobile .form-menu-btn {
   border-bottom: .01em solid #005580;
