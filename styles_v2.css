@@ -1,6 +1,6 @@
 /*
 Custom Styles for CHARTS Blazor Project
-https://blazorplayground.syncfusion.com/VtBojBNzneQwYamS
+https://blazorplayground.syncfusion.com/VtVeNqMryZMYvUDq
 */
 /* Typography */
 body {
@@ -887,7 +887,7 @@ header.mobile .menu-mobile .form-menu-input[type="radio"]:checked + span .form-m
   #hero .herosearch div p {
     width: 100%;
   }
-  #hero .herosearch form.roundsearchbar input[type=submit] {
+  #hero .herosearch form.roundsearchbar button {
     background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 8 8' style='enable-background:new 0 0 8 8;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;stroke:%23FFFFFF;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;%7D .st1%7Bfill:none;stroke:%23FFFFFF;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Ccircle class='st0' cx='3.5' cy='3.5' r='2'/%3E%3Cline class='st1' x1='5.1' y1='5.1' x2='6.5' y2='6.5'/%3E%3C/svg%3E");
     background-position: center center;
     background-repeat: no-repeat;
@@ -911,7 +911,7 @@ form.roundsearchbar input[type=search] {
   padding-left: 1.3em;
   text-align: left;
 }
-form.roundsearchbar input[type=submit] {
+form.roundsearchbar button {
   position: absolute;
   top: 0;
   right: 0;
@@ -927,7 +927,7 @@ form.roundsearchbar input[type=submit] {
   transition: 0.3s;
   border-radius: 50px !important;
 }
-form.roundsearchbar input[type=submit]:hover {
+form.roundsearchbar button:hover {
   background: #f68e1e;
 }
 form.roundsearchbar:has(input.form-control:focus) {
