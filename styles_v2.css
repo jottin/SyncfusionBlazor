@@ -1,6 +1,6 @@
 /*
 Custom Styles for CHARTS Blazor Project
-https://blazorplayground.syncfusion.com/VtVeNqMryZMYvUDq
+https://blazorplayground.syncfusion.com/LjhStqCroslGixTm
 */
 /* Typography */
 body {
@@ -1713,4 +1713,16 @@ footer .copyright span.flhealthblu {
   footer .copyright div div div:nth-child(1) {
     padding-bottom: 1em;
   }
+}
+/* Modals */
+.e-dlg-container {
+  background-color: rgba(0,0,0,.4);
+  backdrop-filter: blur(3px);
+}
+.e-dialog {
+  max-width: 800px;
+  margin: 1em;
+}
+.e-dlg-overlay {
+  background-color: rgba(255,255,255,.2);
 }
